@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.css">
     <script src="bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="main-container bg-primary">
+    <div class="main-container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container p-2">
               <a class="navbar-brand" href="#"><b>giard</b>design</a>
@@ -41,17 +42,101 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Kontakt</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-magnifying-glass fs-5"></i></a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-magnifying-glass fs-5"></i></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                          <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          </form>
+                        </li>
+                  </ul>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
 
-          <div style="height: 10000px;"></div>
-          <div style="height: 10000px;"></div>
-          <div style="height: 10000px;"></div>
+          <section id="mainSection">
+              <div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+                  <div class="container d-flex flex-column" id="leftMainContainer">
+                        <h1>Nowoczesna<br> aranżacja<br> Twojego ogrodu</h1>
+                        <p class="mt-5">Marka GiardDesign to wieloletnie doświadczenie i wysoka<br> estetyka realizacji. Oferujemy kompleksowy zakres usług<br> z indywidualnym podejściem do każdego projektu.</p>
+                        <div class="btn-div d-flex flex-row">
+                          <button type="button" class="btn btn-success contact-btn">Skontaktuj się z nami</button>
+                          <button type="button" class="btn btn-outline-success projects-btn">Zobacz nasze realizacje &nbsp;<i class="fa-solid fa-arrow-down"></i></button>
+                       </div>
+                  </div>
+                </div>
+                <div class="col-md-6 img-div">
+                  <img id="mainPhoto" src="Assets/photo1.png" alt="zdjecie przedstawiajace rosliny na scianie">
+                </div>
+              </div>
+          </section>
+
+          <section id="ofertSection">
+            <div class="container">
+              <div class="row top-row">
+                <div class="col">
+                  <p class="description-tag">Oferta</p>
+                  <h2>Działamy <i>kompleksowo</i></h2>
+                  <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody<br> przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy<br> w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. </p>
+                </div>
+              </div>
+              <div class="row d-flex flex-row justify-content-md-around">
+                <div class="col-md-3">
+
+                  <div class="card">
+                    <img src="Assets/Icons/iconPen.png" alt="ikona dlugopisa">
+                    <div class="card-body">
+                      <h3 class="card-title">Projekty</h3>
+                      <p class="card-text">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
+                      <a href="#">Dowiedz się więcej &nbsp;<i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-3">
+                  
+                  <div class="card">
+                    <img src="Assets/Icons/iconEye.png" alt="ikona dlugopisa">
+                    <div class="card-body">
+                      <h3 class="card-title">Wizualizacje</h3>
+                      <p class="card-text">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
+                      <a href="#">Dowiedz się więcej &nbsp;<i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-3">
+                  
+                  <div class="card">
+                    <img src="Assets/Icons/iconStars.png" alt="ikona dlugopisa">
+                    <div class="card-body">
+                      <h3 class="card-title">Realizacje</h3>
+                      <p class="card-text">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
+                      <a href="#">Zobacz nasze realizacje &nbsp;<i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="oFirmie">
+              <div class="row d-flex flex-row">
+                <div class="col-md-5 img-section">
+
+                </div>
+                <div class="col-md-7">
+
+                </div>
+              </div>
+          </section>
+
+          <div style="height: 1000px;"></div>
     </div>
 </body>
 </html>
