@@ -8,7 +8,10 @@
     <script src="bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet"> 
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/macy@2" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="main-container">
@@ -57,25 +60,35 @@
             </div>
           </nav>
 
-          <section id="mainSection">
-              <div class="row">
-                <div class="col-md-6 d-flex align-items-center">
-                  <div class="container d-flex flex-column" id="leftMainContainer">
+          <section class="main-section">
+            <div class="container-fluid">
+              <div class="row position-relative">
+                <div class="col-lg-6 col-md-7 d-flex align-items-center">
+                  <div class="container d-flex flex-column left-main-container">
                         <h1>Nowoczesna<br> aranżacja<br> Twojego ogrodu</h1>
-                        <p class="mt-5">Marka GiardDesign to wieloletnie doświadczenie i wysoka<br> estetyka realizacji. Oferujemy kompleksowy zakres usług<br> z indywidualnym podejściem do każdego projektu.</p>
+                        <p class="mt-4">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
                         <div class="btn-div d-flex flex-row">
                           <button type="button" class="btn btn-success contact-btn">Skontaktuj się z nami</button>
-                          <button type="button" class="btn btn-outline-success projects-btn">Zobacz nasze realizacje &nbsp;<i class="fa-solid fa-arrow-down"></i></button>
+                          <a href="#projekty"><button type="button" class="btn btn-outline-success projects-btn">Zobacz nasze realizacje &nbsp;<i class="fa-solid fa-arrow-down"></i></button></a>
                        </div>
                   </div>
                 </div>
-                <div class="col-md-6 img-div">
-                  <img id="mainPhoto" src="Assets/photo1.png" alt="zdjecie przedstawiajace rosliny na scianie">
+                <div class="col-lg-6 col-md-5 outer-img">
+                  <div class="img-div">
+                    <img id="mainPhoto" src="Assets/photo1.png" alt="zdjecie przedstawiajace rosliny na scianie">
+                  </div>
+                </div>
+
+                <div class="position-absolute d-flex flex-row align-items-center justify-content-around">
+                  <a href=""><i class="fa-solid fa-arrow-left"></i></a>
+                  <a href=""><i class="fa-solid fa-arrow-right"></i></a> 
                 </div>
               </div>
+            </div>
+              
           </section>
 
-          <section id="ofertSection">
+          <section class="ofert-section">
             <div class="container">
               <div class="row top-row">
                 <div class="col">
@@ -125,22 +138,139 @@
             </div>
           </section>
 
+          <!-- About section-->
           <section id="oFirmie">
               <div class="row">
                 <div class="col-md-6 d-flex align-items-center img-section">
                   <img src="Assets/photo2.png" alt="zielony taras, ogrod">
                 </div>
 
-                <div class="col-md-6 text-light p-5">
-                  <p class="description-tag">Oferta</p>
-                  <h2><b>Tworzymy z<br> <i>pasją</i></b></h2>
-                  <p>Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia. </p>
-                  <button type="button" class="btn btn-outline-success projects-btn text-light">Poznaj nas bliżej</button>
+                <div class="col-md-6 text-light p-5 d-flex align-items-center">
+                  <div>
+                    <p class="description-tag">O firmie</p>
+                    <h2><b>Tworzymy<br> z <i>pasją</i></b></h2>
+                    <p>Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia. </p>
+                    <button type="button" class="btn btn-outline-success px-4 py-2 mt-md-5 btn-know-us">Poznaj nas bliżej <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
                 </div>
               </div>
           </section>
 
-          <div style="height: 1000px;"></div>
+
+          <!-- Projects section -->
+          <section class="projects-section">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="column p-5 d-flex flex-column text-div">
+                  <p class="description-tag">Realizacje</p>
+                  <h2 class="header-projects">Nasze <i>projekty</i></h2>
+                </div>
+              </div>
+              <div class="row py-5">
+                <div class="col masonry-div">
+                  <img src="Assets/ProjectsImgs/P1.png" alt="zdjecie projektu ogrodu 1">
+                  <img src="Assets/ProjectsImgs/P2.png" alt="zdjecie projektu ogrodu 2">
+                  <img src="Assets/ProjectsImgs/P3.png" alt="zdjecie projektu ogrodu 3">
+                  <img src="Assets/ProjectsImgs/P4.png" alt="zdjecie projektu ogrodu 4">
+                  <img src="Assets/ProjectsImgs/P5.png" alt="zdjecie projektu ogrodu 5">
+                  <img src="Assets/ProjectsImgs/P6.png" alt="zdjecie projektu ogrodu 6">
+                  <img src="Assets/ProjectsImgs/P7.png" alt="zdjecie projektu ogrodu 7">
+                  <img src="Assets/ProjectsImgs/P8.png" alt="zdjecie projektu ogrodu 8">
+                  <img src="Assets/ProjectsImgs/P9.jpg" alt="zdjecie projektu ogrodu 9">
+                  <img src="Assets/ProjectsImgs/P10.jpg" alt="zdjecie projektu ogrodu 10">
+                  <img src="Assets/ProjectsImgs/P11.jpg" alt="zdjecie projektu ogrodu 11">
+                  <img src="Assets/ProjectsImgs/P12.jpg" alt="zdjecie projektu ogrodu 12">
+                  <img src="Assets/ProjectsImgs/P13.jpg" alt="zdjecie projektu ogrodu 13">
+                  <img src="Assets/ProjectsImgs/P14.jpg" alt="zdjecie projektu ogrodu 14">
+                  <img src="Assets/ProjectsImgs/P15.jpg" alt="zdjecie projektu ogrodu 15">
+                  <img src="Assets/ProjectsImgs/P16.jpg" alt="zdjecie projektu ogrodu 16">
+                  <img src="Assets/ProjectsImgs/P17.jpg" alt="zdjecie projektu ogrodu 16">
+                </div>
+              </div>
+            </div>
+            <div class="more-div">
+            </div>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+        </section>
+
+        <!-- Instagram section -->
+        <section class="instagram-section">
+          <div class="container-fluid py-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-7">
+                <div class="row p-md-5 p-4 bg-container text-light d-flex align-items-center justify-content-end">
+                  <div class="col-md-8">
+                    <h2>Zostańmy w kontakcie!</h2>
+                    <h2>Znajdziesz nas na <i>Instagramie.</i></h2>
+                  </div>
+                  <div class="col-md-3 d-flex flex-column justify-content-end py-md-5 py-3">
+                    <p>Śledź nasze<br> najnowsze realizacje!</p>
+                    <a href="https://www.instagram.com/" target="_blank"><button type="button" class="btn btn-light instagram-btn">Instagram</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="container-fluid p-5 d-flex justify-content-center text-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <p><b>giard</b>design</p>
+              </div>
+              <div class="col-md-8 d-flex justify-content-md-end">
+                <p>Daj znać co możemy dla ciebie zrobić!</p>
+              </div>
+              <div class="col-md-2 d-flex justify-content-md-end">
+                <button type="button" class="btn btn-success contact-btn">Skontaktuj się z nami</button>
+              </div>
+            </div>
+
+            <div class="row py-5">
+              <hr>
+            </div>
+
+            <div class="row pb-5">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-3">
+                    <a>Kontakt</a>
+                  </div>
+                  <div class="col-md-3">
+                    <a>Instagram</a>
+                  </div>
+                  <div class="col-md-3">
+                    <a>Facebook</a>
+                  </div>
+                  <div class="col-md-3">
+                    <a>LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex justify-content-end">
+                  <div class="col-md-3 d-flex justify-content-md-end">
+                    000-000-000
+                  </div>
+                  <div class="col-md-5 d-flex justify-content-md-end">
+                    giarddesign@kontakt.pl
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row py-md-5">
+              <div class="col-md-6">
+                Prawa zastrzeżone &copy; 2023
+              </div>
+              <div class="col-md-6 d-flex justify-content-md-end">
+                made by Mateusz
+              </div>
+            </div>
+          </div>
+        </footer>
     </div>
 </body>
 </html>

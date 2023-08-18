@@ -1,12 +1,11 @@
-html {
-  scroll-snap-type: y mandatory;
-  scroll-snap-align: start;
+/*
+html{
+    scroll-snap-type: y proximity;
 }
 
-section {
-  scroll-snap-align: start;
-}
-
+section{
+    scroll-snap-align: end;
+}*/
 .navbar-nav .nav-item {
   padding-right: 40px;
 }
@@ -16,90 +15,119 @@ section {
   font-size: 12px;
 }
 
-#mainSection {
+.main-section {
   min-height: calc(100vh - 72px);
   overflow: hidden;
   background-color: #DCC1AB;
 }
-#mainSection .row {
+.main-section .container {
+  width: 100%;
+}
+.main-section .row {
   min-height: calc(100vh - 72px);
   overflow: hidden;
 }
-#mainSection .row #leftMainContainer {
+.main-section .row .position-absolute {
+  bottom: 0;
+  right: 0;
+  width: 180px;
+  height: 90px;
+  background-color: #F5F0EC;
+}
+.main-section .row .position-absolute a {
+  text-decoration: none;
+  color: #000;
+}
+.main-section .row .position-absolute .fa-arrow-left, .main-section .row .position-absolute .fa-arrow-right {
+  font-size: 2rem;
+}
+.main-section .row .left-main-container {
   padding-left: 4.5rem;
 }
-#mainSection h1 {
-  font-family: "Montserrat";
-  font-size: 4rem;
-  font-weight: 600;
+.main-section .row .left-main-container .btn-div {
+  margin-top: 60px;
 }
-#mainSection p {
-  font-size: 1.25rem;
-}
-#mainSection button {
+.main-section .row .left-main-container .btn-div button {
   border-radius: 40px;
   padding: 12px 25px;
 }
-#mainSection .btn-div {
-  margin-top: 60px;
-}
-#mainSection .contact-btn {
+.main-section .row .left-main-container .btn-div .contact-btn {
   background-color: #1B5B31;
 }
-#mainSection .projects-btn {
+.main-section .row .left-main-container .btn-div .projects-btn {
   border: solid 1px #1B5B31;
   color: #1B5B31;
-  margin-left: 20px;
+  margin-left: 36px;
 }
-#mainSection .projects-btn:hover {
+.main-section .row .left-main-container .btn-div .projects-btn:hover {
   background-color: #1B5B31;
   color: #fff;
 }
-#mainSection .img-div {
+.main-section .row .left-main-container h1 {
+  font-family: "Montserrat";
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.main-section .row .left-main-container p {
+  font-size: 1.25rem;
+}
+.main-section .row .outer-img {
+  padding: 0px;
+}
+.main-section .row .outer-img .img-div {
   height: calc(100vh - 72px);
+  display: flex;
+  justify-content: flex-start;
 }
-
-img {
+.main-section .row .outer-img .img-div #mainPhoto {
+  flex: 0 0 auto;
+  display: block;
+  min-width: 0;
   width: 100%;
+  height: 100%;
+  max-height: 76rem;
+  max-width: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
-#ofertSection {
+.ofert-section {
   min-height: 100vh;
   background-color: #F5F0EC;
 }
-#ofertSection .top-row {
+.ofert-section .top-row {
   padding-left: 150px;
 }
-#ofertSection h2 {
-  font-size: 3rem;
+.ofert-section h2 {
+  font-size: 4rem;
   font-family: "Montserrat";
   padding-bottom: 20px;
 }
-#ofertSection p:last-child {
+.ofert-section p:last-child {
   padding-bottom: 50px;
 }
-#ofertSection .card {
+.ofert-section .card {
   border: none;
   border-radius: 30px;
   padding: 20px;
-  height: 360px;
-  width: 360px;
 }
-#ofertSection .card img {
+.ofert-section .card img {
   width: 44px;
   margin-left: 20px;
   padding-top: 20px;
 }
-#ofertSection .card h3 {
+.ofert-section .card h3 {
   font-family: "Montserrat";
   font-weight: 600;
   padding: 5px 0px;
 }
-#ofertSection .card .card-text {
+.ofert-section .card .card-text {
   font-size: 14px;
   padding-bottom: 60px;
 }
-#ofertSection .card a {
+.ofert-section .card a {
   color: #1B5B31;
 }
 
@@ -124,6 +152,9 @@ img {
   font-family: "Montserrat";
   font-size: 3.5rem;
 }
+#oFirmie h2 i {
+  font-family: "Inter";
+}
 #oFirmie .flex-row {
   overflow: hidden;
 }
@@ -131,6 +162,64 @@ img {
   flex: 1;
   padding: 50px;
   background-color: #f2f2f2;
+}
+#oFirmie .btn-know-us {
+  border-radius: 40px;
+  color: #F5F0EC;
+  border-color: #F5F0EC;
+}
+#oFirmie .btn-know-us:hover {
+  color: #1B5B31;
+  background-color: #F5F0EC;
+}
+
+.projects-section {
+  overflow: hidden;
+  background-color: #DCC1AB;
+  position: relative;
+}
+.projects-section img {
+  padding: 0;
+}
+.projects-section .text-div {
+  margin-left: 160px;
+}
+.projects-section .more-div {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 110vh;
+  background: linear-gradient(360deg, #DCC1AB 0%, rgba(214, 183, 158, 0) 100%);
+  z-index: 10;
+}
+.projects-section .container-fluid .header-projects {
+  font-family: "Montserrat";
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 115%;
+  letter-spacing: -1.44px;
+}
+.projects-section .container-fluid .header-projects i {
+  font-family: "Inter";
+}
+.projects-section .container-fluid .masonry-div {
+  max-height: 200vh;
+}
+
+.instagram-section .bg-container {
+  background-color: #1B5B31;
+}
+.instagram-section .bg-container .instagram-btn {
+  border-radius: 40px;
+  padding: 7px 25px;
+  color: #1B5B31;
+}
+
+footer {
+  background-color: #000;
+}
+footer .container .row button {
+  border-radius: 40px;
 }
 
 @media (max-width: 978px) {
@@ -147,19 +236,25 @@ img {
   #mainSection .projects-btn {
     margin-left: 2px;
   }
-  #mainSection h1 {
-    font-size: 3rem;
-    padding-top: 20px;
-  }
-  #mainSection p {
-    font-size: 1rem;
-  }
   #mainSection .row #leftMainContainer {
     justify-content: center;
     align-items: center;
     padding: 15px;
   }
+  #mainSection .row #leftMainContainer h1 {
+    font-size: 2.5rem;
+    padding-top: 20px;
+  }
+  #mainSection .row #leftMainContainer p {
+    font-size: 1rem;
+  }
   #mainSection .row .btn-div {
     padding-bottom: 30px;
+  }
+  #projekty .row {
+    padding-left: 0;
+  }
+  .projects-section .text-div {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,15 +1,14 @@
 @mixin font($font: 'Montserrat') {
     font-family: $font;
 }
-
+/*
 html{
-    scroll-snap-type: y mandatory;
-    scroll-snap-align: start;
+    scroll-snap-type: y proximity;
 }
 
 section{
-    scroll-snap-align: start;
-}
+    scroll-snap-align: end;
+}*/
 .navbar-nav{
     
     .nav-item{
@@ -24,62 +23,98 @@ section{
 }  
 
 
-#mainSection{
+.main-section{
     min-height: calc(100vh - 72px);
     overflow: hidden;
     background-color: #DCC1AB;
-
+    .container{
+        width: 100%;
+    }
     .row{
         min-height: calc(100vh - 72px);
         overflow: hidden;
-        #leftMainContainer{
+
+        .position-absolute{
+            bottom: 0;
+            right: 0;
+            width: 180px;
+            height: 90px;
+            background-color: #F5F0EC;
+            a{
+                text-decoration: none;
+                color: #000; 
+            }
+            .fa-arrow-left, .fa-arrow-right{
+                font-size: 2rem;
+            }   
+        }
+
+        .left-main-container{
             padding-left: 4.5rem;
+            .btn-div{
+                margin-top: 60px;
+
+                button{
+                    border-radius: 40px;
+                    padding: 12px 25px;
+                }
+                
+                .contact-btn{
+                    background-color: #1B5B31;
+                }
+                
+                .projects-btn{
+                    border: solid 1px #1B5B31;
+                    color: #1B5B31;
+                    margin-left: 36px;
+                    &:hover{
+                        background-color: #1B5B31;
+                        color: #fff
+                    }
+                }
+            }
+            h1{
+                @include font;
+                font-size: 3.5rem;
+                font-weight: 600;
+            }
+            p{
+                font-size: 1.25rem;
+            }
         }
-    }
-    h1{
-        @include font;
-        font-size: 4rem;
-        font-weight: 600;
-    }
-    p{
-        font-size: 1.25rem;
-    }
-    button{
-        border-radius: 40px;
-        padding: 12px 25px;
-    }
-    .btn-div{
-        margin-top: 60px;
-    }
-    .contact-btn{
-        background-color: #1B5B31;
-    }
-    .projects-btn{
-        border: solid 1px #1B5B31;
-        color: #1B5B31;
-        margin-left: 20px;
-        &:hover{
-            background-color: #1B5B31;
-            color: #fff
+
+        .outer-img{
+            padding: 0px;
+            .img-div{
+                height: calc(100vh - 72px);
+                display: flex;
+                justify-content: flex-start;
+
+                #mainPhoto{
+                    flex: 0 0 auto;
+                    display: block;
+                    min-width: 0;
+                    width: 100%;
+                    height: 100%;
+                    max-height: 76rem;
+                    max-width: none;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
         }
-    }
-    .img-div{
-        height: calc(100vh - 72px);
-    }
-}
-img {
-    width: 100%;
+    }   
 }
 
 
-#ofertSection{
+.ofert-section{
     min-height: 100vh;
     background-color: #F5F0EC;
     .top-row{
         padding-left: 150px;
     }
     h2{
-        font-size: 3rem;
+        font-size: 4rem;
         @include font;
         padding-bottom: 20px;
     }
@@ -92,8 +127,6 @@ img {
         border: none;
         border-radius: 30px;
         padding: 20px;
-        height: 360px;
-        width: 360px;
         img{
             width: 44px;
             margin-left: 20px;
@@ -135,6 +168,9 @@ img {
     h2{
         @include font();
         font-size: 3.5rem;
+        i{
+            @include font("Inter");
+        }
     }
     .flex-row{
         overflow: hidden;
@@ -144,10 +180,79 @@ img {
         padding: 50px;
         background-color: #f2f2f2;
     }
+    .btn-know-us{
+        border-radius: 40px;
+        color: #F5F0EC;
+        border-color: #F5F0EC; 
+        &:hover{
+            color: #1B5B31;
+            background-color: #F5F0EC;
+        }
+    } 
 }
 
+.projects-section{
+    overflow: hidden;
+    background-color: #DCC1AB;
+    position: relative;
+    img{
+        padding: 0;
+    }
+    .text-div{
+        margin-left: 160px
+    }
+    .more-div{
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: 110vh;
+        background: linear-gradient(360deg, #DCC1AB 0%, rgba(214, 183, 158, 0.00) 100%); 
+        z-index: 10;
+        
+    }
+    button{
 
+    }
 
+    .container-fluid{
+        .header-projects{
+            @include font();
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 115%;
+            letter-spacing: -1.44px;
+            i{
+                @include font("Inter");
+            }
+        }
+        .masonry-div{
+            max-height: 200vh;
+        }
+    }  
+}
+
+.instagram-section{
+    .bg-container{
+        background-color: #1B5B31;
+        .instagram-btn{
+            border-radius: 40px;
+            padding: 7px 25px;
+            color: #1B5B31;
+        }
+    }
+}
+
+footer{
+    background-color: #000;
+    .container{
+        .row{
+            button{
+                border-radius: 40px;
+            }
+        }
+    }
+    
+}
 
 
 @media (max-width: 978px) {
@@ -167,22 +272,33 @@ img {
         .projects-btn{
             margin-left: 2px;
         }
-        h1{
-            font-size: 3rem;
-            padding-top: 20px;
-        }
-        p{
-            font-size: 1rem;
-        }
+        
         .row{
             #leftMainContainer{
                 justify-content: center;
                 align-items: center;
                 padding: 15px;
+                h1{
+                    font-size: 2.5rem;
+                    padding-top: 20px;
+                }
+                p{
+                    font-size: 1rem;
+                }
             }
             .btn-div{
                 padding-bottom: 30px;
             }
+        }
+    }
+    #projekty{
+        .row{
+            padding-left: 0;
+        }
+    }
+    .projects-section{
+        .text-div{
+            margin-left: 0;
         }
     }
 }
