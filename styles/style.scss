@@ -6,7 +6,7 @@ html{
     scroll-snap-type: y proximity;
 }
 
-section{
+section, footer{
     scroll-snap-align: end;
 }*/
 .navbar-nav{
@@ -16,12 +16,26 @@ section{
     }
 }
 
+.font-1{
+    @include font();
+}
+
+.font-2{
+    font-family: 'Inter', sans-serif;
+}
 
 .description-tag{
     padding-top: 50px;
     font-size: 12px;
 }  
 
+.visibility-hidden{
+    visibility: hidden;
+}
+
+.display-none{
+    display: none;
+}
 
 .main-section{
     min-height: calc(100vh - 72px);
@@ -33,7 +47,9 @@ section{
     .row{
         min-height: calc(100vh - 72px);
         overflow: hidden;
-
+        .slider-prev,.slider-next{
+            cursor: pointer;
+        }
         .position-absolute{
             bottom: 0;
             right: 0;
@@ -74,7 +90,6 @@ section{
                 }
             }
             h1{
-                @include font;
                 font-size: 3.5rem;
                 font-weight: 600;
             }
@@ -90,7 +105,7 @@ section{
                 display: flex;
                 justify-content: flex-start;
 
-                #mainPhoto{
+                .main-photo{
                     flex: 0 0 auto;
                     display: block;
                     min-width: 0;
@@ -110,30 +125,33 @@ section{
 .ofert-section{
     min-height: 100vh;
     background-color: #F5F0EC;
-    .top-row{
-        padding-left: 150px;
-    }
+
     h2{
-        font-size: 4rem;
-        @include font;
+        font-size: 3rem;
+        font-weight: 600;
         padding-bottom: 20px;
     }
-    p{
-        &:last-child{
-            padding-bottom: 50px;
-        }
+    .top-row{
+        padding-left: 160px;
     }
     .card{
         border: none;
+        min-height: 364px;
+        min-width: 250px;
+        max-width: 378px;
         border-radius: 30px;
         padding: 20px;
+        cursor: pointer;
+        &:hover{
+            background-color: #DCC1AB;
+            transition: all 0.4s;
+        }
         img{
             width: 44px;
             margin-left: 20px;
             padding-top: 20px;
         }
         h3{
-            @include font();
             font-weight: 600;
             padding: 5px 0px;
         }
@@ -147,11 +165,10 @@ section{
     }
 }
 
-#oFirmie{
+.about-section{
     min-height: 100vh;
     overflow: hidden;
     background-color: #1B5B31;
-    overflow: hidden;
 
     .img-section{
         float: none;
@@ -166,11 +183,7 @@ section{
         }
     }
     h2{
-        @include font();
         font-size: 3.5rem;
-        i{
-            @include font("Inter");
-        }
     }
     .flex-row{
         overflow: hidden;
@@ -191,16 +204,24 @@ section{
     } 
 }
 
+
+
 .projects-section{
     overflow: hidden;
     background-color: #DCC1AB;
     position: relative;
+    
+    
     img{
         padding: 0;
+        cursor: pointer;
     }
     .text-div{
         margin-left: 160px
     }
+    .masonry-div{
+    max-height: 200vh;
+    }   
     .more-div{
         position: absolute;
         bottom: 0;
@@ -210,28 +231,67 @@ section{
         z-index: 10;
         
     }
-    button{
-
-    }
 
     .container-fluid{
         .header-projects{
-            @include font();
             font-size: 3rem;
             font-weight: 600;
             line-height: 115%;
             letter-spacing: -1.44px;
-            i{
-                @include font("Inter");
-            }
-        }
-        .masonry-div{
-            max-height: 200vh;
-        }
+        }   
     }  
 }
 
+
+.preview-div{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    height: 100%;
+    font-size: 40px;
+    .preview-background-div{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        opacity: 80%;
+        z-index: -1;
+    }
+    .close-div{
+        position: relative;
+        top: 0;
+        right: 0;
+        .fa-x{
+            cursor: pointer;
+        }
+    }
+    .img-div{
+        width: 100%;
+        .fa-chevron-left,.fa-chevron-right{
+            cursor: pointer;
+        }
+        img{
+            max-height: 80vh;
+            max-width: 80vw;
+        }
+    }
+}
+
+
 .instagram-section{
+    position: relative;
+    .btn-div{
+        position: absolute;
+        width: 100vw;
+        top: -140px;
+        z-index: 10;
+        button{
+            border-radius: 40px;
+        }
+    }
     .bg-container{
         background-color: #1B5B31;
         .instagram-btn{
@@ -260,40 +320,36 @@ footer{
       padding:0;
       margin:0;
     }
+     
+    .main-section{
+        .row{
+            padding-left: 0px;
+            .position-absolute{
+                top: 0;
+                right: 0;
+                opacity: 50%;
+                color: #f2f2f2;
+                background-color: #000;
+            }
+            .outer-img{
+                .img-div{
+                    height: 30vh;
+                }
+            }
+        }
+    }
+    .main-section{
+        .row{
+            padding-left: 0px;
 
+        }   
+    }
     body {
       padding:0;
     }
-
-    #mainSection{
-        button{
-            padding: 8px 4px;
-        }
-        .projects-btn{
-            margin-left: 2px;
-        }
-        
-        .row{
-            #leftMainContainer{
-                justify-content: center;
-                align-items: center;
-                padding: 15px;
-                h1{
-                    font-size: 2.5rem;
-                    padding-top: 20px;
-                }
-                p{
-                    font-size: 1rem;
-                }
-            }
-            .btn-div{
-                padding-bottom: 30px;
-            }
-        }
-    }
-    #projekty{
-        .row{
-            padding-left: 0;
+    .ofert-section{
+        .top-row{
+            padding: 2rem;
         }
     }
     .projects-section{

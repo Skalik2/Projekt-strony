@@ -8,13 +8,13 @@
     <script src="bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet"> 
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://cdn.jsdelivr.net/npm/macy@2" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="main-container">
+    <div class="main-container font-2">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container p-2">
               <a class="navbar-brand" href="#"><b>giard</b>design</a>
@@ -60,74 +60,85 @@
             </div>
           </nav>
 
+          <!-- Main section-->
           <section class="main-section">
             <div class="container-fluid">
               <div class="row position-relative">
-                <div class="col-lg-6 col-md-7 d-flex align-items-center">
-                  <div class="container d-flex flex-column left-main-container">
-                        <h1>Nowoczesna<br> aranżacja<br> Twojego ogrodu</h1>
+                <div class="col-lg-6 col-md-7 d-flex align-items-center order-md-1 order-2">
+                  <div class="container d-flex flex-column left-main-container p-md-5 p-2">
+                        <h1 class="font-1">Nowoczesna<br> aranżacja<br> Twojego ogrodu</h1>
                         <p class="mt-4">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
                         <div class="btn-div d-flex flex-row">
                           <button type="button" class="btn btn-success contact-btn">Skontaktuj się z nami</button>
                           <a href="#projekty"><button type="button" class="btn btn-outline-success projects-btn">Zobacz nasze realizacje &nbsp;<i class="fa-solid fa-arrow-down"></i></button></a>
                        </div>
                   </div>
+
+                  <div class="container flex-column left-main-container p-md-5 p-3 display-none">
+                    <h1 class="font-1">Dbamy<br> o środowisko</h1>
+                    <p class="mt-4">Jako firma ogrodnicza skupiamy się nie tylko na pięknych aranżacjach, ale także na ochronie środowiska. Wybierając lokalne rośliny i ekologiczne materiały, stawiamy na zrównoważone podejście. Nasze projekty wspierają różnorodność biologiczną i oszczędzają wodę poprzez efektywne systemy nawadniania. Dążymy do tego, aby nasze działania były przyjazne dla natury i inspirujące dla naszych klientów.</p>
+                    <div class="btn-div d-flex flex-row">
+                      <button type="button" class="btn btn-success contact-btn">Skontaktuj się z nami</button>
+                      <a href="#eco"><button type="button" class="btn btn-outline-success projects-btn">Wesprzyj nas w działaniach &nbsp;<i class="fa-solid fa-leaf"></i></button></a>
+                   </div>
+                  </div>
+
                 </div>
-                <div class="col-lg-6 col-md-5 outer-img">
+                <div class="col-lg-6 col-md-5 outer-img order-md-2 order-1">
                   <div class="img-div">
-                    <img id="mainPhoto" src="Assets/photo1.png" alt="zdjecie przedstawiajace rosliny na scianie">
+                    <img class="main-photo" src="Assets/Slider/photo1.jpg" alt="zdjecie baner">
                   </div>
                 </div>
 
                 <div class="position-absolute d-flex flex-row align-items-center justify-content-around">
-                  <a href=""><i class="fa-solid fa-arrow-left"></i></a>
-                  <a href=""><i class="fa-solid fa-arrow-right"></i></a> 
+                  <i class="fa-solid fa-arrow-left slider-prev"></i>
+                  <i class="fa-solid fa-arrow-right slider-next"></i> 
                 </div>
               </div>
             </div>
-              
           </section>
 
-          <section class="ofert-section">
-            <div class="container">
+          <!-- Ofert section -->
+          <section class="ofert-section d-flex flex-column align-items-center justify-content-center">
+            <div class="container-fluid">
               <div class="row top-row">
                 <div class="col">
                   <p class="description-tag">Oferta</p>
-                  <h2>Działamy <i>kompleksowo</i></h2>
+                  <h2 class="font-1">Działamy <i class="font-2">kompleksowo</i></h2>
                   <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody<br> przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy<br> w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. </p>
                 </div>
               </div>
-              <div class="row d-flex flex-row justify-content-md-around">
-                <div class="col-md-3">
+              <div class="row py-3 d-flex flex-row justify-content-md-around">
+                <div class="col-md-3 pb-3 d-flex justify-content-center">
 
                   <div class="card">
                     <img src="Assets/Icons/iconPen.png" alt="ikona dlugopisa">
                     <div class="card-body">
-                      <h3 class="card-title">Projekty</h3>
+                      <h3 class="card-title font-1">Projekty</h3>
                       <p class="card-text">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
                       <a href="#">Dowiedz się więcej &nbsp;<i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
                   </div>
 
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 pb-3 d-flex justify-content-center">
                   
                   <div class="card">
                     <img src="Assets/Icons/iconEye.png" alt="ikona dlugopisa">
                     <div class="card-body">
-                      <h3 class="card-title">Wizualizacje</h3>
+                      <h3 class="card-title font-1">Wizualizacje</h3>
                       <p class="card-text">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
                       <a href="#">Dowiedz się więcej &nbsp;<i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
                   </div>
 
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 pb-3 d-flex justify-content-center">
                   
                   <div class="card">
                     <img src="Assets/Icons/iconStars.png" alt="ikona dlugopisa">
                     <div class="card-body">
-                      <h3 class="card-title">Realizacje</h3>
+                      <h3 class="card-title font-1">Realizacje</h3>
                       <p class="card-text">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
                       <a href="#">Zobacz nasze realizacje &nbsp;<i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
@@ -139,7 +150,7 @@
           </section>
 
           <!-- About section-->
-          <section id="oFirmie">
+          <section class="about-section">
               <div class="row">
                 <div class="col-md-6 d-flex align-items-center img-section">
                   <img src="Assets/photo2.png" alt="zielony taras, ogrod">
@@ -148,7 +159,7 @@
                 <div class="col-md-6 text-light p-5 d-flex align-items-center">
                   <div>
                     <p class="description-tag">O firmie</p>
-                    <h2><b>Tworzymy<br> z <i>pasją</i></b></h2>
+                    <h2 class="font-1"><b>Tworzymy<br> z <i class="font-2">pasją</i></b></h2>
                     <p>Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia. </p>
                     <button type="button" class="btn btn-outline-success px-4 py-2 mt-md-5 btn-know-us">Poznaj nas bliżej <i class="fa-solid fa-arrow-right"></i></button>
                   </div>
@@ -158,12 +169,12 @@
 
 
           <!-- Projects section -->
-          <section class="projects-section">
+          <section class="projects-section overflow-hidden" id="projekty">
             <div class="container-fluid">
               <div class="row">
                 <div class="column p-5 d-flex flex-column text-div">
                   <p class="description-tag">Realizacje</p>
-                  <h2 class="header-projects">Nasze <i>projekty</i></h2>
+                  <h2 class="header-projects font-1">Nasze <i class="font-2">projekty</i></h2>
                 </div>
               </div>
               <div class="row py-5">
@@ -186,15 +197,40 @@
                   <img src="Assets/ProjectsImgs/P16.jpg" alt="zdjecie projektu ogrodu 16">
                   <img src="Assets/ProjectsImgs/P17.jpg" alt="zdjecie projektu ogrodu 16">
                 </div>
+
+                <!-- Preview box -->
+                <div class="preview-div d-flex flex-column justify-content-center visibility-hidden text-light">
+                <div class="preview-background-div">
+
+                </div>
+                  <div class="row close-div">
+                    <div class="col d-flex justify-content-end">
+                      <i class="fa-solid fa-x"></i>
+                    </div>
+                  </div>
+                  <div class="img-div d-flex flex-row align-items-center justify-content-center">
+                    <div class="prev-div px-2">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <img src="" alt="zdjecie projektu" class="preview-img">
+                    <div class="next-div px-2">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- Preview box -->
+
               </div>
             </div>
             <div class="more-div">
             </div>
-            <button type="button" class="btn btn-outline-dark">Dark</button>
         </section>
 
         <!-- Instagram section -->
         <section class="instagram-section">
+          <div class="btn-div d-flex justify-content-center">
+            <button type="button" class="btn btn-outline-dark btn-more px-3 py-2">Rozwiń <i class="fa-solid fa-arrow-down-long"></i></button>
+          </div>
           <div class="container-fluid py-5">
             <div class="row d-flex justify-content-center">
               <div class="col-7">
