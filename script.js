@@ -20,26 +20,26 @@ const galleryNextBtn = document.querySelector(".fa-chevron-right");
 
 // Main section slider
 let slideLimit = sliderLeftContainer.length;
-let currentPhoto = 1;
+let currentPhotoIndex = 1;
 
 sliderPrevBtn.onclick = () => {
-  if(currentPhoto > 1){
-    currentPhoto -= 1;
-    sliderImg.src = `Assets/Slider/photo${currentPhoto}.jpg`;
-    sliderLeftContainer[currentPhoto-1].classList.toggle("display-none");
-    sliderLeftContainer[currentPhoto-1].classList.toggle("d-flex");
-    sliderLeftContainer[currentPhoto-0].classList.toggle("display-none");
-    sliderLeftContainer[currentPhoto-0].classList.toggle("d-flex");
+  if(currentPhotoIndex > 1){
+    currentPhotoIndex -= 1;
+    sliderImg.src = `Assets/Slider/photo${currentPhotoIndex}.jpg`;
+    sliderLeftContainer[currentPhotoIndex-1].classList.toggle("display-none");
+    sliderLeftContainer[currentPhotoIndex-1].classList.toggle("d-flex");
+    sliderLeftContainer[currentPhotoIndex-0].classList.toggle("display-none");
+    sliderLeftContainer[currentPhotoIndex-0].classList.toggle("d-flex");
   } 
 }
 sliderNextBtn.onclick = () => {
-  if(currentPhoto < slideLimit){
-    currentPhoto += 1;
-    sliderImg.src = `Assets/Slider/photo${currentPhoto}.jpg`;
-    sliderLeftContainer[currentPhoto-1].classList.toggle("display-none");
-    sliderLeftContainer[currentPhoto-1].classList.toggle("d-flex");
-    sliderLeftContainer[currentPhoto-2].classList.toggle("display-none");
-    sliderLeftContainer[currentPhoto-2].classList.toggle("d-flex");
+  if(currentPhotoIndex < slideLimit){
+    currentPhotoIndex += 1;
+    sliderImg.src = `Assets/Slider/photo${currentPhotoIndex}.jpg`;
+    sliderLeftContainer[currentPhotoIndex-1].classList.toggle("display-none");
+    sliderLeftContainer[currentPhotoIndex-1].classList.toggle("d-flex");
+    sliderLeftContainer[currentPhotoIndex-2].classList.toggle("display-none");
+    sliderLeftContainer[currentPhotoIndex-2].classList.toggle("d-flex");
   }
 }
 

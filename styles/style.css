@@ -1,25 +1,27 @@
-/*
-html{
-    scroll-snap-type: y proximity;
+@keyframes card-animation {
+  20% {
+    transform: rotate(0deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  70% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
 }
-
-section, footer{
-    scroll-snap-align: end;
-}*/
-.navbar-nav .nav-item {
-  padding-right: 40px;
-}
-
-.font-1 {
+.font-header {
   font-family: "Montserrat";
 }
 
-.font-2 {
+.font-main {
   font-family: "Inter", sans-serif;
 }
 
 .description-tag {
-  padding-top: 50px;
+  padding-top: 40px;
   font-size: 12px;
 }
 
@@ -29,6 +31,10 @@ section, footer{
 
 .display-none {
   display: none;
+}
+
+.navbar-nav .nav-item {
+  padding-right: 40px;
 }
 
 .main-section {
@@ -71,15 +77,15 @@ section, footer{
   padding: 12px 25px;
 }
 .main-section .row .left-main-container .btn-div .contact-btn {
-  background-color: #1B5B31;
+  background-color: #1b5b31;
 }
 .main-section .row .left-main-container .btn-div .projects-btn {
   border: solid 1px #1B5B31;
-  color: #1B5B31;
+  color: #1b5b31;
   margin-left: 36px;
 }
 .main-section .row .left-main-container .btn-div .projects-btn:hover {
-  background-color: #1B5B31;
+  background-color: #1b5b31;
   color: #fff;
 }
 .main-section .row .left-main-container h1 {
@@ -125,6 +131,7 @@ section, footer{
 }
 .ofert-section .card {
   border: none;
+  transform-style: preserve-3d;
   min-height: 364px;
   min-width: 250px;
   max-width: 378px;
@@ -134,6 +141,7 @@ section, footer{
 }
 .ofert-section .card:hover {
   background-color: #DCC1AB;
+  animation: card-animation 0.8s 1 linear;
   transition: all 0.4s;
 }
 .ofert-section .card img {
@@ -150,13 +158,13 @@ section, footer{
   padding-bottom: 60px;
 }
 .ofert-section .card a {
-  color: #1B5B31;
+  color: #1b5b31;
 }
 
 .about-section {
   min-height: 100vh;
   overflow: hidden;
-  background-color: #1B5B31;
+  background-color: #1b5b31;
 }
 .about-section .img-section {
   float: none;
@@ -186,13 +194,13 @@ section, footer{
   border-color: #F5F0EC;
 }
 .about-section .btn-know-us:hover {
-  color: #1B5B31;
+  color: #1b5b31;
   background-color: #F5F0EC;
 }
 
 .projects-section {
-  overflow: hidden;
   background-color: #DCC1AB;
+  overflow: hidden;
   position: relative;
 }
 .projects-section img {
@@ -262,7 +270,6 @@ section, footer{
 }
 .instagram-section .btn-div {
   position: absolute;
-  width: 100vw;
   top: -140px;
   z-index: 10;
 }
@@ -270,12 +277,12 @@ section, footer{
   border-radius: 40px;
 }
 .instagram-section .bg-container {
-  background-color: #1B5B31;
+  background-color: #1b5b31;
 }
 .instagram-section .bg-container .instagram-btn {
   border-radius: 40px;
   padding: 7px 25px;
-  color: #1B5B31;
+  color: #1b5b31;
 }
 
 footer {
@@ -285,23 +292,25 @@ footer .container .row button {
   border-radius: 40px;
 }
 
-@media (max-width: 978px) {
-  .container {
-    padding: 0;
-    margin: 0;
-  }
+@media (max-width: 764px) {
   .main-section .row {
     padding-left: 0px;
   }
   .main-section .row .position-absolute {
     top: 0;
     right: 0;
-    opacity: 50%;
+    opacity: 60%;
     color: #f2f2f2;
     background-color: #000;
   }
   .main-section .row .outer-img .img-div {
     height: 30vh;
+  }
+}
+@media (max-width: 978px) {
+  .container {
+    padding: 0;
+    margin: 0;
   }
   .main-section .row {
     padding-left: 0px;
