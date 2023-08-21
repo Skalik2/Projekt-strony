@@ -9,11 +9,27 @@
 }
 
 @keyframes card-animation {
-    20%    { transform: rotate(0deg) scale(1.1); }
+    20%   { transform: rotate(0deg) scale(1.1); }
     40%   { transform: rotate(5deg); }
     70%   { transform: rotate(-5deg); }
     100%  { transform: rotate(0deg) scale(1);}
-  }
+};
+@keyframes scrolldown-button-animation {
+    20%    { transform:  translateY(0);}
+    30%    { transform:  translateY(100px);}
+    50%  { transform:   translateX(100px);}
+    51%  { transform:   translateY(-100px);}
+    52%  { transform:   translateX(0px);}
+    100%  { transform:  translateY(0px);}
+};
+
+@keyframes about-button-animation {
+    20%    { transform:  translateX(0);}
+    40%    { transform:  translateX(5px);}
+    70%  { transform:   translateX(-5px);}
+    100%  { transform:  translateX(0);}
+};
+
 
 .font-header{
     @include font();
@@ -89,10 +105,16 @@
                     border: solid 1px #1B5B31;
                     @include ColorDarkGreen('color');
                     margin-left: 36px;
+                    overflow: hidden;
                     &:hover{
                         @include ColorDarkGreen();
-                        color: #fff
+                        color: #fff;
+                        .fa-arrow-down{
+                            animation: scrolldown-button-animation 0.8s 1 ease-in;
+                        }
+                        
                     }
+                        
                 }
             }
             h1{
@@ -152,7 +174,6 @@
         &:hover{
             @include ColorBeige();
             animation: card-animation 0.8s 1 linear;
-            transition: all 0.4s;
         }
         img{
             width: 44px;
@@ -208,6 +229,7 @@
         &:hover{
             @include ColorDarkGreen('color');
             background-color: #F5F0EC;
+            animation: about-button-animation 0.8s 1 linear;
         }
     } 
 }
@@ -218,10 +240,15 @@
     @include ColorBeige();
     overflow: hidden;
     position: relative;
-    
-    img{
-        padding: 0;
-        cursor: pointer;
+    .masonry-img-div{
+        img{
+            padding: 0;
+            cursor: pointer;
+            &:hover{
+                transform: scale(0.95);
+                transition: all 0.2s ease-in-out;
+            }
+        }
     }
     .text-div{
         margin-left: 160px
@@ -295,7 +322,13 @@
         top: -140px;
         z-index: 10;
         button{
+            overflow: hidden;
             border-radius: 40px;
+            &:hover{
+                .fa-arrow-down-long{
+                    animation: scrolldown-button-animation 0.8s 1 ease-in;
+                }
+            } 
         }
     }
     .bg-container{

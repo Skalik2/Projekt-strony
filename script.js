@@ -3,7 +3,6 @@ const sliderPrevBtn = document.querySelector(".slider-prev");
 const sliderNextBtn = document.querySelector(".slider-next");
 const sliderImg = document.querySelector(".main-photo");
 const sliderLeftContainer = document.querySelectorAll(".left-main-container"); 
-console.log(sliderLeftContainer);
 // Ofert section
 const cardsTab = document.querySelectorAll(".card");
 // Project-section

@@ -12,6 +12,40 @@
     transform: rotate(0deg) scale(1);
   }
 }
+@keyframes scrolldown-button-animation {
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  51% {
+    transform: translateY(-100px);
+  }
+  52% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes about-button-animation {
+  20% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .font-header {
   font-family: "Montserrat";
 }
@@ -83,10 +117,14 @@
   border: solid 1px #1B5B31;
   color: #1b5b31;
   margin-left: 36px;
+  overflow: hidden;
 }
 .main-section .row .left-main-container .btn-div .projects-btn:hover {
   background-color: #1b5b31;
   color: #fff;
+}
+.main-section .row .left-main-container .btn-div .projects-btn:hover .fa-arrow-down {
+  animation: scrolldown-button-animation 0.8s 1 ease-in;
 }
 .main-section .row .left-main-container h1 {
   font-size: 3.5rem;
@@ -142,7 +180,6 @@
 .ofert-section .card:hover {
   background-color: #DCC1AB;
   animation: card-animation 0.8s 1 linear;
-  transition: all 0.4s;
 }
 .ofert-section .card img {
   width: 44px;
@@ -196,6 +233,7 @@
 .about-section .btn-know-us:hover {
   color: #1b5b31;
   background-color: #F5F0EC;
+  animation: about-button-animation 0.8s 1 linear;
 }
 
 .projects-section {
@@ -203,9 +241,13 @@
   overflow: hidden;
   position: relative;
 }
-.projects-section img {
+.projects-section .masonry-img-div img {
   padding: 0;
   cursor: pointer;
+}
+.projects-section .masonry-img-div img:hover {
+  transform: scale(0.95);
+  transition: all 0.2s ease-in-out;
 }
 .projects-section .text-div {
   margin-left: 160px;
@@ -274,7 +316,11 @@
   z-index: 10;
 }
 .instagram-section .btn-div button {
+  overflow: hidden;
   border-radius: 40px;
+}
+.instagram-section .btn-div button:hover .fa-arrow-down-long {
+  animation: scrolldown-button-animation 0.8s 1 ease-in;
 }
 .instagram-section .bg-container {
   background-color: #1b5b31;
